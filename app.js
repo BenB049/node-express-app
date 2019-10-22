@@ -27,6 +27,7 @@ app.get('/', function (req, res) {
     '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
     '/fancy/?first=Denise&last=Case <br>' +
+    '/Ben <br>' +
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
@@ -46,6 +47,10 @@ app.get('/big', (req, res) => {
 // or respond with JSON
 app.get('/json', (req, res) => {
   res.send('{"name" : "Nandini"}')
+})
+
+app.get('/Ben', (req, res) => {
+  res.send('<h2>Ben was here</h2>')
 })
 
 // :name indicates a parameter at this location in the URI
@@ -99,6 +104,7 @@ app.listen(port, hostname, () => {
   console.log(`   Try /greeting/yourname`)
   console.log(`   Try /yo/Dr.Rogers`)
   console.log(`   Try /fancy/?first=Denise&last=Case`)
+  console.log(`   Try /Ben`)
   console.log('\n Hit CTRL-C CTRL-C to stop\n')
 })
 
